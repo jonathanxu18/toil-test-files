@@ -2,7 +2,7 @@ from toil.common import Toil
 from toil.job import Job
 
 def helloWorld(job, message, memory="1G", cores=1, disk="1G"):
-    return f"Hello, world! {message}"
+    job.log(f"Hello, world! {message}")
 
 if __name__ == "__main__":
     parser = Job.Runner.getDefaultArgumentParser()
