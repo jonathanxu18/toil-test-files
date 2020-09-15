@@ -15,7 +15,4 @@ if __name__ == "__main__":
         parent_job.addChildJobFn(helloWorld, i)
 
     with Toil(options) as workflow:
-        if not workflow.options.restart:
-            workflow.start(parent_job)
-        else:
-            sortedFileID = workflow.restart()
+        workflow.start(parent_job)
