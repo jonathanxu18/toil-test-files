@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     parent_job = Job.wrapJobFn(helloWorld, "FIRST JOB")
 
-    for i in range(0, 500):
+    for i in range(0, 100):
         parent_job.addChildJobFn(helloWorld, i)
 
     with Toil(options) as workflow:
