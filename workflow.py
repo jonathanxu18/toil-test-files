@@ -9,10 +9,10 @@ if __name__ == "__main__":
     options = parser.parse_args()
     options.clean = "always"
 
-    parent_job = Job.wrapJobFn(helloWorld, "FIRST JOB")
+    root_job = Job.wrapJobFn(helloWorld, "FIRST JOB")
 
-    for i in range(0, 500):
-        parent_job.addChildJobFn(helloWorld, i)
+    for i in range(0, 1000):
+        root_job.addChildJobFn(helloWorld, i)
 
     with Toil(options) as workflow:
-        workflow.start(parent_job)
+        workflow.start(root_job)
