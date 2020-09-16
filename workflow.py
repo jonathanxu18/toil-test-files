@@ -1,7 +1,7 @@
 from toil.common import Toil
 from toil.job import Job
 
-def helloWorld(job, message, memory="1G", cores=1, disk="1G"):
+def helloWorld(job, message, memory="1G", cores=1, disk="3G"):
     job.log(f"Hello, world! {message}")
 
 if __name__ == "__main__":
