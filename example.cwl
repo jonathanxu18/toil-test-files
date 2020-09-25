@@ -3,7 +3,7 @@ class: CommandLineTool
 baseCommand: echo
 stdout: output.txt
 requirements:
-  DockerRequirements:
+  DockerRequirement:
     dockerPull: ubuntu:16.04
 inputs:
   message:
