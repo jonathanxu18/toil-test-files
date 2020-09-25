@@ -1,15 +1,15 @@
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: echo
-stdout: output.txt
-requirements:
+baseCommand: node
+hints:
   DockerRequirement:
-    dockerPull: ubuntu:16.04
+    dockerPull: node:slim
 inputs:
-  message:
-    type: string
+  src:
+    type: File
     inputBinding:
       position: 1
 outputs:
-  output:
+  example_out:
     type: stdout
+stdout: output.txt
