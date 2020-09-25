@@ -2,6 +2,9 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: echo
 stdout: output.txt
+requirements:
+  DockerRequirments:
+    dockerPull: ubuntu:16.04
 inputs:
   message:
     type: string
